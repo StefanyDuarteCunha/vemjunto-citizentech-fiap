@@ -14,7 +14,8 @@
 .busca-rota-title {
     color: var(--branco-puro);
     font-size: var(--fonte-2-25-to-1-5);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .busca-rota-icon {
@@ -70,4 +71,13 @@ input::placeholder, .select-label, .checkbox-label {
 .icon-filtro-rotas-mulheres {
     color: var(--vermelho-suave);
     margin: 0 1rem;
+}
+
+
+/* ---------------------------------------------------- Configurações Busca Rota - Medias ---------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .container-filtros-rotas {
+        flex-direction: column;
+    }
 }

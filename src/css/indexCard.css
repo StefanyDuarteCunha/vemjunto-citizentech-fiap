@@ -286,6 +286,10 @@
     .card-3-container-info {
         flex-direction: column;
     }
+
+    .card-1-container, .card-4-container, .index-container-line-cards {
+        margin: 0 5rem 2rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -300,10 +304,18 @@
     .card-1-container-button {
         flex-direction: column;
     }  
+
+    .card-1-container, .card-4-container, .index-container-line-cards {
+        margin: 0 4rem 2rem;
+    }
 }
 
 @media (max-width: 700px) {
     .card-3-container-info, .card-4-container {
         flex-direction: column;
+    }
+
+    .card-1-container, .card-4-container, .index-container-line-cards {
+        margin: 0 2rem 2rem;
     }
 }
