@@ -287,7 +287,7 @@
         flex-direction: column;
     }
 
-    .card-1-container, .card-4-container, .index-container-line-cards {
+    .card-1-container, .card-4-container, .index-container-line-cards, .card-4-title {
         margin: 0 5rem 2rem;
     }
 }
@@ -303,9 +303,10 @@
 
     .card-1-container-button {
         flex-direction: column;
+        gap: 1rem;
     }  
 
-    .card-1-container, .card-4-container, .index-container-line-cards {
+    .card-1-container, .card-4-container, .index-container-line-cards, .card-4-title {
         margin: 0 4rem 2rem;
     }
 }
@@ -315,7 +316,7 @@
         flex-direction: column;
     }
 
-    .card-1-container, .card-4-container, .index-container-line-cards {
+    .card-1-container, .card-4-container, .index-container-line-cards, .card-4-title {
         margin: 0 2rem 2rem;
     }
 }
