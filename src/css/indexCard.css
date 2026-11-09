@@ -1,0 +1,309 @@
+@import url('index.css');
+
+
+/* ---------------------------------------------------- Configurações Index - display dark ---------------------------------------------------- */
+
+
+/* Card 1 */
+
+.card-1-container, .card-2-container, .card-3-container {
+    background-color: var(--cinza-escuro-fechado);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+}
+
+.card-1-container, .card-4-container, .index-container-line-cards {
+    margin: 0 8rem;
+}
+
+.card-1-tag-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-1-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--verde-escuro-suave);
+    border: 2px solid var(--verde-escuro-border);
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+}
+
+.card-1-tag-icon {
+    margin-right: 1rem;
+}
+
+.card-1-tag-paragraph {
+    font-weight: 400;
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.card-1-title {
+    text-align: center;
+    font-size: var(--fonte-2-75-to-1-75);
+    color: var(--branco-puro);
+    margin-bottom: 1.5rem;
+}
+
+.card-1-title-destaque {
+    color: var(--verde-escuro-suave);
+}
+
+.card-1-subtitle {
+    text-align: center;
+    font-size: var(--fonte-1-15-to-1-0);
+    color: var(--cinza-claro);
+    margin-bottom: 1.5rem;
+}
+
+.card-1-container-button {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.card-1-button-green, .card-1-button-dark {
+    border-radius: 0.7rem;
+    padding: 0.75rem 1rem;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+    text-align: center;
+}
+
+.card-1-button-green {
+    background-color: var(--verde-escuro-suave);
+    border: 2px solid var(--verde-escuro-border);
+    text-decoration: none;
+}
+
+.card-1-button-dark {
+    background-color: var(--body-dark);
+    border: 2px solid var(--cinza-claro);
+    text-decoration: none;
+}
+
+.card-1-button-green:hover {
+    background-color: var(--verde-escuro);
+    border: 2px solid var(--verde-escuro-border);
+}
+
+.card-1-button-dark:hover {
+    background-color: var(--cinza-claro);
+    border: 2px solid var(--body-dark);
+    color: var(--body-dark);
+}
+
+.card-1-button-icon-left {
+    margin-right: 1rem;
+}
+
+.card-1-button-icon-right {
+    margin-left: 1rem;
+}
+
+
+/* Card 2 e 3 */
+
+.index-container-line-cards {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    align-items: stretch;
+}
+
+.index-container-line-cards > * {
+    flex: 1;
+}
+
+.card-2-tag, .card-3-tag {
+    display: inline-block;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.7rem;
+    font-size: var(--fonte-1-15-to-1-0);
+    margin-bottom: 1rem;
+}
+
+.card-2-tag {
+    background-color: var(--vermelho-black);
+    border: 2px solid var(--vermelho-escuro);
+    color: var(--vermelho-escuro);
+}
+
+.card-3-tag {
+    background-color: var(--verde-escuro);
+    border: 2px solid var(--verde-escuro-suave);
+    color: var(--verde-escuro-suave);
+}
+
+.card-2-title, .card-3-title {
+    color: var(--cinza-claro);
+    font-size: var(--fonte-1-25-to-1-125);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-2-subtitle, .card-3-subtitle  {
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.card-2-container-info {
+    background-color: var(--vermelho-black);
+    border: 3px solid var(--vermelho-escuro);
+    color: var(--vermelho-claro);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.card-2-info-number {
+    font-size: var(--fonte-1-5-to-1-25);
+    font-weight: 560;
+    margin-bottom: 0.7rem;
+}
+
+.card-2-info-paragraph {
+    font-size: var(--fonter-1-0-to-0-875);
+    font-weight: 400;
+    margin-bottom: 0.7rem;
+}
+
+.card-2-info-fonte {
+    font-size: var(--fonter-0-7-to-0-6);
+    font-weight: 400;
+}
+
+.card-3-container-info {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.card-3-container-info > * {
+    flex: 1;
+}
+
+.card-3-info-card {
+    text-align: center;
+    background-color: var(--body-dark);
+    border: 3px solid var(--cinza-medio-escuro);
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+}
+
+.card-3-info-icon-yellow, .card-3-info-icon-green {
+    font-size: var(--fonte-1-5-to-1-25);
+}
+
+.card-3-info-icon-yellow {
+    color: var(--amarelo-queimado);
+}
+
+.card-3-info-icon-green {
+    color: var(--verde-escuro-suave);
+}
+
+.card-3-info-title {
+    color: var(--cinza-claro);
+    font-size: var(--fonte-1-0-to-0-875);
+    margin: 0.5rem 0;
+}
+
+.card-3-info-paragraph {
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+
+/* Card 4 */
+.card-4-title {
+    margin: 0 8rem 1rem;
+    text-align: center;
+    color: var(--cinza-claro);
+    font-size: var(--fonte-1-5-to-1-25);
+    font-weight: 500;
+}
+
+.card-4-container {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.card-4-container > * {
+    flex: 1;
+}
+
+.card-4-ods-card {
+    background-color: var(--cinza-escuro-fechado);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+    color: var(--cinza-claro);
+}
+
+.card-4-ods-title {
+    font-size: var(--fonte-1-5-to-1-25);
+}
+
+.card-4-ods-title.red {
+    color: var(--vermelho-escuro);
+}
+
+.card-4-ods-title.violet {
+    color: var(--roxo-violeta);
+}
+
+.card-4-ods-title.green {
+    color: var(--verde-escuro-suave);
+}
+
+.card-4-ods-subtitle {
+    font-size: var(--fonte-1-0-to-0-875);
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.card-4-ods-paragraph {
+    font-size: var(--fonter-0-9-to-0-75);
+    font-weight: 100;
+}
+
+
+/* ---------------------------------------------------- Configurações Index - Medias ---------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .card-3-container-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .index-container-line-cards {
+        flex-direction: column;
+    }
+
+    .card-3-container-info {
+        flex-direction: row;
+    }
+
+    .card-1-container-button {
+        flex-direction: column;
+    }  
+}
+
+@media (max-width: 700px) {
+    .card-3-container-info, .card-4-container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,73 @@
+@import url('index.css');
+
+
+/* ---------------------------------------------------- Configurações Busca Rota - display dark ---------------------------------------------------- */
+
+.container-busca-rota {
+    background-color: var(--cinza-escuro-fechado);
+    margin: 0 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+}
+
+.busca-rota-title {
+    color: var(--branco-puro);
+    font-size: var(--fonte-2-25-to-1-5);
+    margin-bottom: 1rem;
+}
+
+.busca-rota-icon {
+    color: var(--verde-escuro-suave);
+    margin-right: 1rem;
+}
+
+.container-filtros-rotas {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+input::placeholder, .select-label, .checkbox-label {
+    color: var(--cinza-claro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.filtro-busca-responsavel, .filtro-busca-bairro, .filtro-busca-mulheres {
+    border: 5px solid var(--cinza-medio-escuro);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--body-dark);
+    font-size: var(--fonter-0-9-to-0-75);
+    font-weight: bold;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    color: var(--cinza-claro);
+}
+
+.filtro-busca-responsavel-input, .filtro-busca-bairro-select {
+    color: var(--cinza-claro);
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+    width: 100%;
+}
+
+.filtro-busca-responsavel-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.icon-filtro-rotas {
+    color: var(--amarelo-queimado);
+    margin-right: 1rem;
+    
+}
+
+.icon-filtro-rotas-mulheres {
+    color: var(--vermelho-suave);
+    margin: 0 1rem;
+}

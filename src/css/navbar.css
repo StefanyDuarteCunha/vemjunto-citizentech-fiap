@@ -1,0 +1,164 @@
+@import url('index.css');
+
+
+/* ---------------------------------------------------- Configurações Navbar - display dark ---------------------------------------------------- */
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--cinza-medio-escuro);
+    border-bottom: 3px solid var(--cinza-medio-escuro);
+    padding: 0.7rem 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.navbar-container-title {
+    display: flex;
+}
+
+.navbar-icon-title {
+    background-color: var(--verde-escuro-suave);
+    padding: 0.25rem;
+    font-size: var(--fonte-3-0-to-2-0);
+    display: inline-block;
+    border-radius: 1rem;
+    margin-right: 0.7rem;
+}
+
+.navbar-title {
+    color: var(--branco-puro);
+    font-size: var(--fonte-2-5-to-1-5);
+}
+
+.navbar-title-destaque {
+    color: var(--verde-escuro-suave);
+}
+
+.navbar-subtitle {
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-7-to-0-6);
+}
+
+.navbar-container-acessos {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--cinza-escuro-fechado);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+    justify-content: space-between;
+}
+
+.navbar-acessos-menu {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    align-items: center;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+    text-decoration: none;
+}
+
+.navbar-text-hidden {
+    margin-left: 0.25rem;
+}
+
+.navbar-acessos-menu:focus {
+    background-color: var(--verde-escuro-suave);
+    border: 1px solid var(--verde-escuro-suave);
+}
+
+.navbar-acessos-menu:hover {
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro-border);
+}
+
+.navbar-icon-menu {
+    margin-right: 0.5rem;
+}
+
+.navbar-button {
+    display: flex;
+    background-color: var(--verde-escuro-suave);
+    border: 1px solid var(--verde-escuro-suave);
+    border-radius: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.navbar-button:hover {
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro-border);
+}
+
+.navbar-icon-button {
+    margin-right: 0.5rem;
+}
+
+
+/* ---------------------------------------------------- Configurações Navbar - Medias ---------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .navbar-container-button {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar-container-acessos {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        /* Distribui os 4 itens igualmente de ponta a ponta */
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .navbar-acessos-menu:focus {
+        background-color: transparent;
+        border: none;
+        color: var(--verde-escuro-suave);
+    }
+
+    .navbar-acessos-menu:hover {
+        background-color: transparent;
+        border: none;
+        color: var(--verde-limao-neon);
+    }
+
+    .navbar-acessos-menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        background-color: transparent;
+    }
+
+    .navbar-text-hidden {
+        display: none;
+    }
+
+    .navbar-icon-menu {
+        margin: 0;
+        padding-bottom: 0.2rem;
+    }
+
+}

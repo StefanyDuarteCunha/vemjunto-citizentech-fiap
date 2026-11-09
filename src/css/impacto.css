@@ -1,0 +1,99 @@
+@import url('index.css');
+
+
+/* ---------------------------------------------------- Configurações Impacto - display dark ---------------------------------------------------- */
+
+.impacto-title {
+    margin: 0 8rem;
+    text-align: center;
+    color: var(--cinza-claro);
+    font-size: var(--fonte-2-25-to-1-5);
+    font-weight: bold;
+}
+
+.impacto-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem 8rem 0;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.impacto-container  > * {
+    flex: 1;
+}
+
+.impacto-card {
+    background-color: var(--cinza-escuro-fechado);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+    text-align: center;
+}
+
+.impacto-icon {
+    color: var(--amarelo-queimado);
+    font-size: var(--fonte-2-5-to-1-5);
+}
+
+.impacto-number {
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--cinza-claro);
+    margin: 0.5rem 0;
+}
+
+.impacto-paragraph {
+    font-size: var(--fonte-1-25-to-1-125);
+    color: var(--cinza-claro);
+}
+
+/* ---------------------------------------------------- Configurações Impactos - Medias ---------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .impacto-title {
+        margin: 0 5rem;
+    }
+
+    .impacto-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem 5rem 0;
+        gap: 1rem;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 900px) {
+    .impacto-title {
+        margin: 0 4rem;
+    }
+
+    .impacto-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem 4rem 0;
+        gap: 1rem;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 700px) {
+    .impacto-title {
+        margin: 0 2rem;
+    }
+
+    .impacto-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem 2rem 0;
+        gap: 1rem;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 500px) {
+    .impacto-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
