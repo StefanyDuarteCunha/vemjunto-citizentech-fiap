@@ -1,4 +1,4 @@
-import '../css/IndexCard.css'
+import '../css/indexCard.css'
 
 function IndexCard2 () {
 
