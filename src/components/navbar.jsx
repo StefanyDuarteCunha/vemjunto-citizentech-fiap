@@ -9,7 +9,7 @@ function Navbar() {
         <div className="navbar-container">
             <div className="navbar-container-title">
                 <div>
-                    <i className="bi bi-shield-check navbar-icon-title"></i>
+                    <i className="bi bi-person-walking navbar-icon-title"></i>
                 </div>
                 <div>
                     <h1 className="navbar-title">Vem<span className="navbar-title-destaque">Junto</span></h1>

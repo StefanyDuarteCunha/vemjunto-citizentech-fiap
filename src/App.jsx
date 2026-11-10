@@ -12,6 +12,7 @@ import IndexCard3 from './components/indexCard3.jsx'
 import IndexCard4 from './components/indexCard4.jsx'
 import Impacto from './components/impacto.jsx'
 import BuscaRotas from './components/buscaRotas.jsx'
+import RotaCard from './components/rotaCard.jsx';
 import Contato from './components/contato.jsx'
 
 function App() {
@@ -35,7 +36,12 @@ function App() {
                 {<IndexCard4 />}
               </>
             } />
-            <Route path="/rotasseguras" element={<BuscaRotas />} />
+            <Route path="/rotasseguras" element={
+              <>
+                {<BuscaRotas />}
+                {<RotaCard />}
+              </>
+            } />
             <Route path="/impactos" element={<Impacto />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>

@@ -8,6 +8,7 @@
     --verde-escuro-suave: #2EA043;    /* utilizado nas tags de rotas em aberto */
     --verde-escuro: #042b0b;    /* utilizado no hover dos botões */
     --verde-escuro-border: #11521c;    /* utilizado no hover dos botões */
+    --verde-claro: #93ce9e;
     --roxo-violeta: #8957E5;    /* utilizado nas tags de rotas voltadas às mulheres */
     --amarelo-queimado: #D29922;    /* utilizado nas tags de últimas vagas */
     --vermelho-suave: #F85149;    /* utilizado nas tags de grupos cheios e campos incorretos */
@@ -60,6 +61,21 @@ html, body, #root {
     /* o root é a div em que o react "entra na página" */
     display: flex;
     flex-direction: column;
+    overflow-y: scroll; 
+}
+
+#root::-webkit-scrollbar {
+    width: 1px; /* Largura da barra */
+}
+
+#root::-webkit-scrollbar-track {
+    background: transparent; /* Deixa o fundo da barra invisível para não marcar o layout */
+}
+
+#root::-webkit-scrollbar-thumb {
+    background-color: var(--body-dark, #333); /* Cor do quadrado que arrasta */
+    border-radius: 10px;
+    border: 2px solid transparent; /* Cria um respiro sutil */
 }
 
 body {
@@ -71,6 +87,14 @@ h1, h2, h3, .navbar-brand {
     /* Destaque para títulos com Inter Extra-Bold */
     font-family: 'Inter', sans-serif;
     font-weight: 800;
+}
+
+textarea::placeholder, select, input, input::placeholder, textarea:focus, textarea {
+    /* Destaque para títulos com Inter Extra-Bold */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
 }
 
 .body-container {

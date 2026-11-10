@@ -9,10 +9,11 @@ function BuscaRotas() {
     return (
         <>
             <div className="container-busca-rota">
-                    <h1 className="busca-rota-title">
+                <h1 className="busca-rota-title">
                     <i class="bi bi-compass busca-rota-icon"></i>
-                    Buscar rotas de Caminhada Acessíveis
+                    Buscar Rotas de Caminhada
                 </h1>
+                <h3 className="busca-rota-subtitle">Encontre caminhos acessíveis, seguros e adaptados para a sua jornada.</h3>
                 <div className="container-filtros-rotas">
 
                     {/* O primeiro filtro é relacionado a busca por nome do responsável pela rota */}

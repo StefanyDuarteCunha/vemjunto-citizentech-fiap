@@ -3,23 +3,38 @@
 
 /* ---------------------------------------------------- Configurações Impacto - display dark ---------------------------------------------------- */
 
-.impacto-title {
+.impacto-container {
     margin: 0 8rem;
-    text-align: center;
-    color: var(--cinza-claro);
-    font-size: var(--fonte-2-25-to-1-5);
-    font-weight: bold;
 }
 
-.impacto-container {
+.impacto-title {
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--branco-puro);
+    text-align: center;
+}
+
+.impacto-title-icon {
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--verde-escuro-suave);
+    margin-right: 1rem;
+}
+
+.impacto-subtitle {
+    margin: 0.5rem 0 3rem;
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+    text-align: center;
+    font-weight: 300;
+}
+
+.impacto-container-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 4rem 8rem 0;
     gap: 1rem;
     align-items: stretch;
 }
 
-.impacto-container  > * {
+.impacto-container-cards > * {
     flex: 1;
 }
 
@@ -50,49 +65,46 @@
 /* ---------------------------------------------------- Configurações Impactos - Medias ---------------------------------------------------- */
 
 @media (max-width: 1200px) {
-    .impacto-title {
+    .impacto-container {
         margin: 0 5rem;
     }
 
-    .impacto-container {
+    .impacto-container-cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin: 3rem 5rem 0;
         gap: 1rem;
         align-items: stretch;
     }
 }
 
 @media (max-width: 900px) {
-    .impacto-title {
+    .impacto-container {
         margin: 0 4rem;
     }
 
-    .impacto-container {
+    .impacto-container-cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin: 3rem 4rem 0;
         gap: 1rem;
         align-items: stretch;
     }
 }
 
 @media (max-width: 700px) {
-    .impacto-title {
+    .impacto-container {
         margin: 0 2rem;
     }
 
-    .impacto-container {
+    .impacto-container-cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin: 3rem 2rem 0;
         gap: 1rem;
         align-items: stretch;
     }
 }
 
 @media (max-width: 500px) {
-    .impacto-container {
+    .impacto-container-cards {
         display: flex;
         flex-direction: column;
     }

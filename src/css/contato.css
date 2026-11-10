@@ -1,0 +1,141 @@
+@import url('index.css');
+
+
+/* ---------------------------------------------------- Configurações Contato - display dark ---------------------------------------------------- */
+
+.contato-container {
+    margin: 0 8rem;
+}
+
+.contato-title {
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--branco-puro);
+    text-align: center;
+}
+
+.contato-title-icon {
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--verde-escuro-suave);
+    margin-right: 1rem;
+}
+
+.contato-subtitle {
+    margin: 0.5rem 0 3rem;
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+    text-align: center;
+    font-weight: 300;
+}
+
+#contato-forms {
+    background-color: var(--cinza-escuro-fechado);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+}
+
+.contato-forms-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.contato-forms-label {
+    margin-bottom: 0.25rem;
+    font-size: var(--fonter-0-9-to-0-75);
+    color: var(--cinza-claro);
+}
+
+.contato-forms-input, .contato-forms-select, .contato-forms-textarea {
+    padding: 0.55rem 1rem;
+    border: 5px solid var(--cinza-medio-escuro);
+    border-radius: 0.5rem;
+    background-color: var(--body-dark);
+}
+
+.contato-forms-cont-caracteres {
+    margin-top: 0.5rem;
+    text-align: end;
+    font-size: var(--fonter-0-7-to-0-6);
+    color: var(--cinza-claro);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.contato-forms-button-container {
+    display: flex;
+    justify-content: end;
+}
+
+.contato-forms-button {
+    background-color: var(--verde-escuro-suave);
+    border: 1px solid var(--verde-escuro-suave);
+    border-radius: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.contato-forms-button:hover {
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro-border);
+}
+
+.contato-forms-mensagem-sucesso {
+    position: absolute;
+    bottom: 5rem;
+    left: 8rem;
+    z-index: 50; /* utilizado para que o conteúdo flutue sobre os demais */
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro-border);
+    font-size: var(--fonter-0-9-to-0-75);
+    border: 1px solid var(--verde-escuro-border);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    width: 25%;
+}
+
+
+/* ---------------------------------------------------- Configurações Contato - Medias ---------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .contato-container {
+        margin: 0 5rem;
+    }
+
+    .contato-forms-mensagem-sucesso {
+        bottom: 5rem;
+        left: 5rem;
+        width: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .contato-container {
+        margin: 0 4rem;
+    }
+
+    .contato-forms-mensagem-sucesso {
+        bottom: 4rem;
+        left: 4rem;
+        width: 60%;
+    }
+
+    #contato-forms {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .contato-container {
+        margin: 0 2rem;
+    }
+
+    .contato-forms-mensagem-sucesso {
+        bottom: 2rem;
+        left: 2rem;
+        width: 60%;
+    }
+}

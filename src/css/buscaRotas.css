@@ -4,35 +4,37 @@
 /* ---------------------------------------------------- Configurações Busca Rota - display dark ---------------------------------------------------- */
 
 .container-busca-rota {
-    background-color: var(--cinza-escuro-fechado);
-    margin: 0 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 2px solid var(--cinza-medio-escuro);
+    margin: 0 8rem;
 }
 
 .busca-rota-title {
     color: var(--branco-puro);
     font-size: var(--fonte-2-25-to-1-5);
-    margin-bottom: 3rem;
     text-align: center;
 }
 
 .busca-rota-icon {
     color: var(--verde-escuro-suave);
+    font-size: var(--fonte-2-25-to-1-5);
     margin-right: 1rem;
+}
+
+.busca-rota-subtitle {
+    margin: 0.5rem 0 3rem;
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+    text-align: center;
+    font-weight: 300;
 }
 
 .container-filtros-rotas {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-}
-
-input::placeholder, .select-label, .checkbox-label {
-    color: var(--cinza-claro);
-    font-weight: bold;
-    font-size: var(--fonter-0-9-to-0-75);
+    background-color: var(--cinza-escuro-fechado);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
 }
 
 .filtro-busca-responsavel, .filtro-busca-bairro, .filtro-busca-mulheres {
@@ -49,15 +51,13 @@ input::placeholder, .select-label, .checkbox-label {
 }
 
 .filtro-busca-responsavel-input, .filtro-busca-bairro-select {
-    color: var(--cinza-claro);
     background-color: transparent;
     border: none;
-    font-weight: bold;
     font-size: var(--fonter-0-9-to-0-75);
     width: 100%;
 }
 
-.filtro-busca-responsavel-input:focus {
+.filtro-busca-responsavel-input:focus, .filtro-busca-bairro-select:focus {
     outline: none;
     box-shadow: none;
 }
@@ -76,8 +76,24 @@ input::placeholder, .select-label, .checkbox-label {
 
 /* ---------------------------------------------------- Configurações Busca Rota - Medias ---------------------------------------------------- */
 
+@media (max-width: 1200px) {
+    .container-busca-rota {
+        margin: 0 5rem;
+    }
+}
+
 @media (max-width: 900px) {
     .container-filtros-rotas {
         flex-direction: column;
     }
+
+    .container-busca-rota {
+        margin: 0 4rem;
+    } 
+}
+
+@media (max-width: 700px) {
+    .container-busca-rota {
+        margin: 0 2rem;
+    } 
 }
