@@ -39,7 +39,12 @@ function App() {
             <Route path="/rotasseguras" element={
               <>
                 {<BuscaRotas />}
-                {<RotaCard />}
+                <div className="rotas-container-line-cards">
+                  {<RotaCard />}
+                  {<RotaCard />}
+                  {<RotaCard />}
+                  {<RotaCard />}
+                </div>
               </>
             } />
             <Route path="/impactos" element={<Impacto />} />

@@ -10,11 +10,15 @@
     --verde-escuro-border: #11521c;    /* utilizado no hover dos botões */
     --verde-claro: #93ce9e;
     --roxo-violeta: #8957E5;    /* utilizado nas tags de rotas voltadas às mulheres */
+    --roxo-escuro: #601387;
     --amarelo-queimado: #D29922;    /* utilizado nas tags de últimas vagas */
+    --amarelo-claro: #eec771;
     --vermelho-suave: #F85149;    /* utilizado nas tags de grupos cheios e campos incorretos */
     --vermelho-escuro: #8F3048;
     --vermelho-black: #171920;
     --vermelho-claro: #FDA4AF;
+    --azul-claro: #1c4ca6;
+    --azul-escuro: #0b224f;
 
     /* cor utilizada no modo de alto contraste */
     --body-alto-contraste: #000000;
