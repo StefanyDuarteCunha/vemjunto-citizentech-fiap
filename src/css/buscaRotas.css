@@ -29,7 +29,7 @@
 
 .container-filtros-rotas {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 1rem;
     background-color: var(--cinza-escuro-fechado);
     padding: 2rem;
@@ -37,7 +37,35 @@
     border: 2px solid var(--cinza-medio-escuro);
 }
 
-.filtro-busca-responsavel, .filtro-busca-bairro, .filtro-busca-mulheres {
+.container-filtros-fixos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.container-filtros-avancados {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.botao-filtros-hidden {
+    background-color: transparent;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: var(--branco-puro);
+    text-align: end;
+}
+
+.botao-filtros-hidden.ativo {
+    border-bottom: 1px solid var(--cinza-medio-escuro);
+}
+
+.icon-filtro-hidden {
+    margin-right: 1rem;
+}
+
+.filtro-busca-responsavel, .filtro-busca-bairro, .filtro-busca-cidade, .filtro-busca-tipo-rota, .filtro-busca-mulheres, .filtro-busca-aberta, .filtro-busca-piso, .filtro-busca-acessivel {
     border: 5px solid var(--cinza-medio-escuro);
     border-radius: 1rem;
     padding: 1rem 1.5rem;
@@ -50,35 +78,53 @@
     color: var(--cinza-claro);
 }
 
-.filtro-busca-responsavel-input, .filtro-busca-bairro-select {
+.filtro-busca-responsavel-input, .filtro-busca-bairro-select, .filtro-busca-cidade-select, .filtro-busca-tipo-rota-select {
     background-color: transparent;
     border: none;
     font-size: var(--fonter-0-9-to-0-75);
     width: 100%;
 }
 
-.filtro-busca-responsavel-input:focus, .filtro-busca-bairro-select:focus {
+.filtro-busca-responsavel-input:focus, .filtro-busca-bairro-select:focus, .filtro-busca-cidade-select:focus, .filtro-busca-tipo-rota-select:focus {
     outline: none;
     box-shadow: none;
 }
 
 .icon-filtro-rotas {
-    color: var(--amarelo-queimado);
+    color: var(--ciano-brilhante);
     margin-right: 1rem;
     
 }
 
-.icon-filtro-rotas-mulheres {
-    color: var(--vermelho-suave);
+.icon-filtro-rotas-mulheres, .icon-filtro-vaga-aberta, .icon-filtro-piso-tatil, .icon-filtro-acessivel-cadeira {
     margin: 0 1rem;
 }
 
+.icon-filtro-rotas-mulheres {
+    color: var(--roxo-violeta);
+}
+
+.icon-filtro-vaga-aberta {
+    color: var(--verde-escuro-suave);
+}
+
+.icon-filtro-piso-tatil {
+    color: var(--azul-claro);
+}
+
+.icon-filtro-acessivel-cadeira {
+    color: var(--amarelo-escuro);
+}
 
 /* ---------------------------------------------------- Configurações Busca Rota - Medias ---------------------------------------------------- */
 
 @media (max-width: 1200px) {
     .container-busca-rota {
         margin: 0 5rem;
+    }
+
+    .container-filtros-fixos, .container-filtros-avancados {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -90,10 +136,24 @@
     .container-busca-rota {
         margin: 0 4rem;
     } 
+
+    .container-filtros-fixos, .container-filtros-avancados {
+        gap: 0.5rem;
+    }
 }
 
 @media (max-width: 700px) {
     .container-busca-rota {
         margin: 0 2rem;
     } 
+
+    .container-filtros-fixos, .container-filtros-avancados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .container-filtros-fixos, .container-filtros-avancados {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

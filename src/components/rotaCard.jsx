@@ -1,7 +1,6 @@
 import '../css/rotaCard.css'
-import dadosRotas from '../data/rotas.json';
 
-function RotaCard() {
+function RotaCard({ rotas = [] }) {
 
     // o objeto pode receber rotas com recorrência ou ocorrência única, o que vai alterar o tipo de informação apresentada. este trecho do código recebe a frequência e valida se é único ou recorrente
     const formatarFrequencia = (rota) => {
@@ -15,10 +14,18 @@ function RotaCard() {
         return dias;
     };
 
+    if (rotas.length === 0) {
+        return (
+            <p className="no-rotas-found" style={{ textAlign: 'center', margin: '2rem 0', width: '100%' }}>
+                Nenhuma rota encontrada com os filtros selecionados.
+            </p>
+        );
+    }
+
     return (
         <>
             {/* 2. Mapeia a lista importada diretamente do rotas.json */}
-            {dadosRotas.map((rota) => {
+            {rotas.map((rota) => {
                 const vagasRestantes = rota.integrantesMaximo - rota.integrantesAtuais;
                 
                 return (
@@ -45,7 +52,7 @@ function RotaCard() {
                                 <i className="bi bi-geo-alt rotacard-encontro-icon"></i>
                                 <div className="rotacard-container-encontro">
                                     <p className="rotacard-encontro-title">{rota.destinoNome}</p>
-                                    <p className="rotacard-encontro-endereco">{rota.destinoEndereco}</p>
+                                    <p className="rotacard-encontro-endereco">{rota.origemRua}, {rota.origemNumero} - {rota.origemBairro}</p>
                                 </div>
                             </div>
                             <p className={`rotacard-divisoria-rota ${rota.tipoRota === "ponto_onibus" ? 'hidden' : ''}`}>|</p>
@@ -53,8 +60,8 @@ function RotaCard() {
                             <div className={`rotacard-container-rota-fim ${rota.tipoRota === "ponto_onibus" ? 'hidden' : ''}`}>
                                 <i className="bi bi-compass rotacard-destino-icon"></i>
                                 <div className="rotacard-container-destino">
-                                    <p className="rotacard-destino-title">{rota.destinoNome}"</p>
-                                    <p className="rotacard-destino-endereco">{rota.destinoEndereco}</p>
+                                    <p className="rotacard-destino-title">{rota.destinoNome}</p>
+                                    <p className="rotacard-destino-endereco">{rota.destinoRua}, {rota.destinoNumero} - {rota.destinoBairro}</p>
                                 </div>
                             </div>
                         </div>
