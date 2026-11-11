@@ -41,9 +41,6 @@ function App() {
                 {<BuscaRotas />}
                 <div className="rotas-container-line-cards">
                   {<RotaCard />}
-                  {<RotaCard />}
-                  {<RotaCard />}
-                  {<RotaCard />}
                 </div>
               </>
             } />

@@ -65,7 +65,7 @@ function Contato() {
     <>
       <div className="contato-container">
         <h1 className="contato-title">
-          <i class="bi bi-chat contato-title-icon"></i>
+          <i className="bi bi-chat contato-title-icon"></i>
           Fale Conosco
         </h1>
         <h3 className="contato-subtitle">Estamos aqui para ouvir você. Envie sua mensagem, dúvida ou sugestão de rota.</h3>

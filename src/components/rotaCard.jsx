@@ -1,71 +1,129 @@
 import '../css/rotaCard.css'
+import dadosRotas from '../data/rotas.json';
 
-function RotaCard () {
+function RotaCard() {
 
-  return (
-    <>
-        <div className="rotacards-container">
-            <div className="rotacards-tag-container">
-                <p className="rotacards-tag">Vagas abertas</p>
-            </div>
-            <div className="rotacards-container-responsavel">
-                <i class="bi bi-person-circle rotacards-title-icon"></i>
-                <div className="rotacards-container-name">
-                    <h3 className="rotacards-title-name">Mariana Silva</h3>
-                    <p className="rotacards-title-cargo">Líder da Rota</p>
-                </div>
-            </div>
-            <div className="rotacard-container-rota">
-                <div className="rotacard-container-rota-inicio">
-                    <i class="bi bi-geo-alt rotacard-encontro-icon"></i>
-                    <div className="rotacard-container-encontro">
-                        <p className="rotacard-encontro-title">PONTO DE ENCONTRO</p>
-                        <p className="rotacard-encontro-endereco">Metrô Santa Cruz</p>
+    // o objeto pode receber rotas com recorrência ou ocorrência única, o que vai alterar o tipo de informação apresentada. este trecho do código recebe a frequência e valida se é único ou recorrente
+    const formatarFrequencia = (rota) => {
+        if (rota.frequencia === "unico") {
+            return rota.dataInicio;
+        }
+        const dias = Object.keys(rota.diasSemana)
+            .filter((dia) => rota.diasSemana[dia])
+            .map((dia) => dia.charAt(0).toUpperCase() + dia.slice(1, 3).toLowerCase())
+            .join(", ");
+        return dias;
+    };
+
+    return (
+        <>
+            {/* 2. Mapeia a lista importada diretamente do rotas.json */}
+            {dadosRotas.map((rota) => {
+                const vagasRestantes = rota.integrantesMaximo - rota.integrantesAtuais;
+                
+                return (
+                    <div key={rota.id} className="rotacards-container">
+
+                        {/* Tag de Status da Rota */}
+                        <div className="rotacards-tag-container">
+                            <p className={`rotacards-tag ${vagasRestantes === 0 ? 'lotado' : vagasRestantes === 1 ? "ultimo" : ''}`}>
+                              
+                                {vagasRestantes === 0 ? "Grupo lotado" : vagasRestantes === 1 ? "Última vaga" : "Vagas abertas"}
+                            </p>
+                        </div>
+                        <div className="rotacards-container-responsavel">
+                            <i className="bi bi-person-circle rotacards-title-icon"></i>
+                            <div className="rotacards-container-name">
+                                <h3 className="rotacards-title-name">{rota.nomeCompleto}</h3>
+                                <p className="rotacards-title-cargo">
+                                    {rota.tipoRota === "ponto_onibus" ? "Companhia no Ponto" : "Líder da Rota"}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="rotacard-container-rota">
+                            <div className="rotacard-container-rota-inicio">
+                                <i className="bi bi-geo-alt rotacard-encontro-icon"></i>
+                                <div className="rotacard-container-encontro">
+                                    <p className="rotacard-encontro-title">{rota.destinoNome}</p>
+                                    <p className="rotacard-encontro-endereco">{rota.destinoEndereco}</p>
+                                </div>
+                            </div>
+                            <p className={`rotacard-divisoria-rota ${rota.tipoRota === "ponto_onibus" ? 'hidden' : ''}`}>|</p>
+                            <p className={`rotacard-divisoria-rota ${rota.tipoRota === "ponto_onibus" ? 'hidden' : ''}`}>|</p>
+                            <div className={`rotacard-container-rota-fim ${rota.tipoRota === "ponto_onibus" ? 'hidden' : ''}`}>
+                                <i className="bi bi-compass rotacard-destino-icon"></i>
+                                <div className="rotacard-container-destino">
+                                    <p className="rotacard-destino-title">{rota.destinoNome}"</p>
+                                    <p className="rotacard-destino-endereco">{rota.destinoEndereco}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="rotacard-container-data-hora-integrante">
+                            <div className="rotacard-frequencia-container">
+                                <i className="bi bi-repeat rotacard-frequencia-icon"></i>
+                                <p className="rotacard-frequencia">
+                                    {rota.frequencia === "unico" ? "Temporária" : "Recorrente"}
+                                </p>
+                            </div>
+                            <div className="rotacard-date-container">
+                                <i className="bi bi-calendar-event rotacard-date-icon"></i>
+                                <p className="rotacard-date">{formatarFrequencia(rota)}</p>
+                            </div>
+                            <div className="rotacard-time-container">
+                                <i className="bi bi-clock rotacard-time-icon"></i>
+                                <p className="rotacard-time">{rota.horario}</p>
+                            </div>
+                            <div className="rotacard-integrantes-container">
+                                <i className="bi bi-people rotacard-integrantes-icon"></i>
+                                <p className="rotacard-integrantes">{rota.integrantesAtuais}/{rota.integrantesMaximo} Integrantes</p>
+                            </div>
+                        </div>
+                        
+                        <div className="rotacard-badgets-container">
+                            {rota.exclusivaMulheres && (
+                                <p className="rotacard-container-exclusivo-mulheres">
+                                    <i className="bi bi-heart-fill rotacard-mulheres-icon"></i>
+                                    Mulheres
+                                </p>                                
+                            )}
+
+                            {rota.pisoTatil && (
+                                <p className="rotacard-container-acessivel-visual">
+                                    <i className="bi bi-eye-fill rotacard-visual-icon"></i>
+                                    Piso tátil
+                                </p>
+                            )}
+
+                            {rota.acessivelCadeira && (
+                                <p className="rotacard-container-acessivel-cadeira">
+                                    <i className="bi bi-person-wheelchair rotacard-cadeira-icon"></i>
+                                    Acessível
+                                </p>
+                            )}
+                        </div>
+
+                        <button
+                            className="rotacard-button-cadastrar"
+                            disabled={vagasRestantes === 0}
+                        >
+
+                            {vagasRestantes > 0 ? (
+                                <>
+                                    <i className="bi bi-check-lg rotacard-button-cadastrar-icon"></i>
+                                    Garantir vaga nesta rota
+                                </>
+                            ) : (
+                                <>
+                                    <i className="bi bi-ban rotacard-button-cadastrar-icon"></i>
+                                    Rota Lotada
+                                </>
+                            )}
+                        </button>
                     </div>
-                </div>
-                <p class="rotacard-divisoria-rota">|</p>
-                <p class="rotacard-divisoria-rota">|</p>
-                <div className="rotacard-container-rota-fim">
-                    <i class="bi bi-compass rotacard-destino-icon"></i>
-                    <div className="rotacard-container-destino">
-                        <p className="rotacard-destino-title">DESTINO FINAL</p>
-                        <p className="rotacard-destino-endereco">FIAP - Campus Vila Mariana</p>
-                    </div>
-                </div>
-            </div>
-            <div className="rotacard-container-date-time">
-                <div className="rotacard-date-container">
-                    <i class="bi bi-calendar-event rotacard-date-icon"></i>
-                    <p className="rotacard-date">Apenas 16/10</p>
-                </div>                
-                <div className="rotacard-time-container">
-                    <i class="bi bi-clock rotacard-time-icon"></i>
-                    <p className="rotacard-time">Saída: 22:15</p>
-                </div>
-            </div>
-            <div className="rotacard-integrantes-container">
-                <i class="bi bi-people rotacard-integrantes-icon"></i>
-                <p className="rotacard-integrantes">3/5 Integrantes</p>
-            </div>
-            <p className="rotacard-container-exclusivo-mulheres">
-                <i class="bi bi-heart rotacard-mulheres-icon"></i>
-                EXCLUSIVA - "APENAS MULHERES"
-            </p>
-            <p className="rotacard-container-acessivel-visual">
-                <i class="bi bi-eye-slash rotacard-visual-icon"></i>
-                ROTA COM PISO TÁTIL
-            </p>
-            <p className="rotacard-container-acessivel-cadeira">
-                <i class="bi bi-person-wheelchair rotacard-cadeira-icon"></i>
-                ROTA ACESSÍVEL
-            </p>
-            <p className="rotacard-button-cadastrar">
-                <i class="bi bi-check-lg rotacard-button-cadastrar-icon"></i>
-                Garantir vaga nesta rota
-            </p>
-        </div>
-    </>
-  )
+                )
+            })}
+        </>
+    )
 }
 
 export default RotaCard

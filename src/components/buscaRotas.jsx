@@ -10,7 +10,7 @@ function BuscaRotas() {
         <>
             <div className="container-busca-rota">
                 <h1 className="busca-rota-title">
-                    <i class="bi bi-compass busca-rota-icon"></i>
+                    <i className="bi bi-compass busca-rota-icon"></i>
                     Buscar Rotas de Caminhada
                 </h1>
                 <h3 className="busca-rota-subtitle">Encontre caminhos acessíveis, seguros e adaptados para a sua jornada.</h3>
@@ -18,7 +18,7 @@ function BuscaRotas() {
 
                     {/* O primeiro filtro é relacionado a busca por nome do responsável pela rota */}
                     <div className="filtro-busca-responsavel">
-                        <i class="bi bi-search icon-filtro-rotas"></i>
+                        <i className="bi bi-search icon-filtro-rotas"></i>
                         <input
                             type="text"
                             value={busca}
@@ -30,7 +30,7 @@ function BuscaRotas() {
 
                     {/* O segundo filtro é relacionado a busca por bairro */}
                     <div className="filtro-busca-bairro">
-                        <i class="bi bi-funnel icon-filtro-rotas"></i>
+                        <i className="bi bi-funnel icon-filtro-rotas"></i>
                         <select
                             value={bairro}
                             onChange={(e) => setBairro(e.target.value)}
@@ -49,7 +49,7 @@ function BuscaRotas() {
                             onChange={(e) => setApenasMulheres(e.target.checked)}
                             className="filtro-busca-mulheres-checkbox"
                         />
-                        <i class="bi bi-heart icon-filtro-rotas-mulheres"></i>
+                        <i className="bi bi-heart icon-filtro-rotas-mulheres"></i>
                         Apenas mulheres
                     </label>
                 </div>

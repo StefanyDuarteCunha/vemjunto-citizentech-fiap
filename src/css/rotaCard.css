@@ -13,7 +13,7 @@
 
 .rotacards-container {
     background-color: var(--cinza-escuro-fechado);
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
     border-radius: 1rem;
     border: 2px solid var(--cinza-medio-escuro);
 }
@@ -27,10 +27,22 @@
     background-color: var(--verde-escuro);
     border: 2px solid var(--verde-escuro-suave);
     color: var(--verde-escuro-suave);
-    padding: 0.5rem 0.7rem;
+    padding: 0.4rem 0.7rem;
     border-radius: 0.7rem;
-    font-size: var(--fonter-0-9-to-0-75);
-    margin-bottom: -1rem;
+    font-size: var(--fonter-0-7-to-0-6);
+    margin-right: -1rem;
+}
+
+.rotacards-tag.ultimo {
+    background-color: var(--amarelo-queimado);
+    border: 2px solid var(--amarelo-escuro);
+    color: var(--amarelo-escuro);
+}
+
+.rotacards-tag.lotado {
+    background-color: var(--vermelho-claro);
+    border: 2px solid var(--vermelho-escuro);
+    color: var(--vermelho-escuro);
 }
 
 .rotacards-container-responsavel {
@@ -91,13 +103,17 @@
 .rotacard-encontro-title, .rotacard-destino-title {
     margin-bottom: 0.5rem;
     font-size: var(--fonter-0-9-to-0-75);
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .rotacard-encontro-endereco, .rotacard-destino-endereco {
-    font-size: var(--fonte-1-0-to-0-875);
+    font-size: var(--fonter-0-9-to-0-75);
     color: var(--branco-puro);
-    font-weight: 600;
+    font-weight: 100;
+}
+
+.rotacard-container-rota-fim.hidden, .rotacard-divisoria-rota.hidden {
+    display: none;
 }
 
 .rotacard-divisoria-rota {
@@ -111,23 +127,19 @@
     color: var(--ciano-brilhante);
 }
 
-.rotacard-container-date-time {
-    display: flex;
-    justify-content: space-between;
+.rotacard-container-data-hora-integrante {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
     text-align: center;
-    gap: 1rem;
     margin-bottom: 1rem;
+    gap: 1rem
 }
 
 .rotacard-mulheres-icon, .rotacard-visual-icon, .rotacard-cadeira-icon, .rotacard-button-cadastrar-icon {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
-.rotacard-date, .rotacard-time {
-    flex: 1;
-}
-
-.rotacard-date-container, .rotacard-time-container, .rotacard-integrantes-container {
+.rotacard-date-container, .rotacard-time-container, .rotacard-integrantes-container, .rotacard-frequencia-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,11 +150,7 @@
     border-radius: 0.5rem;
     font-size: var(--fonter-0-9-to-0-75);
     color: var(--cinza-claro);
-    font-weight: 700;
-}
-
-.rotacard-integrantes-container {
-    margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .rotacard-date-icon {
@@ -157,19 +165,31 @@
     color: var(--amarelo-queimado);
 }
 
-.rotacard-container-exclusivo-mulheres, .rotacard-container-acessivel-visual, .rotacard-container-acessivel-cadeira {
-    margin-bottom: 1rem;
-    border-radius: 0.7rem;
-    padding: 0.6rem 0.8rem;
-    color: var(--branco-puro);
-    font-weight: bold;
-    font-size: var(--fonter-0-9-to-0-75);
-    text-align: center;
+.rotacard-frequencia-icon {
+    color: var(--roxo-violeta);
+}
 
+.rotacard-badgets-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    align-items: stretch;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.rotacard-container-exclusivo-mulheres, .rotacard-container-acessivel-visual, .rotacard-container-acessivel-cadeira {
+    border-radius: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    color: var(--branco-puro);
+    font-weight: 100;
+    font-size: var(--fonter-0-7-to-0-6);
+    text-align: center;
+    white-space: nowrap;
 }
 
 .rotacard-container-exclusivo-mulheres {
-    background-color: var(--roxo-violeta);
+    background-color: var(--roxo-escuro);
     border: 1px solid var(--roxo-escuro);
 }
 
@@ -179,8 +199,8 @@
 }
 
 .rotacard-container-acessivel-cadeira {
-    background-color: var(--amarelo-claro);
-    border: 1px solid var(--amarelo-queimado);
+    background-color: var(--amarelo-escuro);
+    border: 1px solid var(--amarelo-escuro);
 }
 
 .rotacard-button-cadastrar {
@@ -192,6 +212,7 @@
     font-weight: bold;
     font-size: var(--fonter-0-9-to-0-75);
     text-align: center;
+    width: 100%;
 }
 
 .rotacard-button-cadastrar:hover {
@@ -199,6 +220,11 @@
     border: 1px solid var(--verde-escuro-border);
 }
 
+.rotacard-button-cadastrar:disabled {
+    background-color: var(--cinza-claro);
+    border: 1px solid var(--cinza-escuro-fechado);
+    color: var(--cinza-escuro-fechado);
+}
 
 /* ---------------------------------------------------- Configurações Rota Cards - Medias ---------------------------------------------------- */
 
@@ -215,8 +241,14 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .rotacards-tag {
-        margin-bottom: 1rem;
+    .rotacard-badgets-container {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .rotacard-container-data-hora-integrante {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
@@ -226,13 +258,25 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .rotacards-tag {
-        margin-bottom: -1rem;
+    .rotacard-badgets-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rotacard-container-data-hora-integrante {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 500px) {
-    .rotacards-tag {
-        margin-bottom: 1rem;
+    .rotacard-badgets-container {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .rotacard-container-data-hora-integrante {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
