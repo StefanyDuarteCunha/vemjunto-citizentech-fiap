@@ -196,6 +196,8 @@
     }
 
     .contraste .navbar-acessos-menu:hover {
+        background-color: transparent;
+        border: 1px solid transparent;
         color: var(--ciano-brilhante);
     }
 
