@@ -1,0 +1,41 @@
+/* ---------------------------------------------------- Configurações Botão Contraste - display dark ---------------------------------------------------- */
+
+.botao-contraste-container {
+    display: flex;
+    justify-content: end;
+    margin: 1rem;
+}
+
+.botao-contraste {
+    background-color: var(--body-alto-contraste);
+    border: 1px solid var(--verde-escuro-suave);
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.botao-contraste:hover {
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro-border);
+}
+
+.botao-contraste-icon {
+    margin-right: 0.5rem;
+}
+
+
+/* ---------------------------------------------------- Configurações Botão Contraste - Modo Contraste ---------------------------------------------------- */
+
+.contraste .botao-contraste {
+    background-color: var(--amarelo-vivo);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .botao-contraste:hover {
+    background-color: var(--amarelo-queimado);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}

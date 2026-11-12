@@ -280,6 +280,102 @@
 }
 
 
+
+/* ---------------------------------------------------- Configurações Index - Modo Contraste ---------------------------------------------------- */
+
+
+/* Card 1 */
+
+.contraste .card-1-container, .contraste .card-2-container, .contraste .card-3-container {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .card-1-tag {
+    background-color: var(--amarelo-vivo);
+    border: 2px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .card-1-tag-paragraph {
+    font-weight: bold;
+}
+
+.contraste .card-1-title-destaque, .contraste .card-3-info-icon-yellow {
+    color: var(--amarelo-vivo);
+}
+
+.contraste .card-1-subtitle, .contraste .card-2-title, .contraste .card-3-title, .contraste .card-2-subtitle, .contraste .card-3-subtitle, .contraste .card-3-info-title, .contraste .card-3-info-paragraph, .contraste .card-4-title {
+    color: var(--branco-puro);
+}
+
+.contraste .card-1-button-green, .contraste .card-1-button-dark {
+    color: var(--body-alto-contraste);
+}
+
+.contraste .card-3-info-icon-gree, .contraste .card-4-ods-title.green {
+    color: var(--verde-limao-neon);
+}
+
+.contraste .card-4-ods-title.red {
+    color: var(--vermelho-neon);
+}
+
+.contraste .card-4-ods-title.violet {
+    color: var(--ciano-brilhante);
+}
+
+.contraste .card-1-button-green {
+    background-color: var(--verde-limao-neon);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .card-1-button-dark {
+    background-color: var(--amarelo-vivo);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .card-1-button-green:hover {
+    background-color: var(--verde-claro);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .card-1-button-dark:hover {
+    background-color: var(--amarelo-queimado);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .card-2-tag {
+    background-color: red;
+    border: 2px solid var(--branco-puro);
+    color: var(--branco-puro);
+}
+
+.contraste .card-3-tag {
+    background-color: var(--verde-limao-neon);
+    border: 2px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .card-2-container-info {
+    background-color: var(--body-alto-contraste);
+    border: 3px solid var(--amarelo-vivo);
+    color: var(--amarelo-vivo);
+}
+
+.contraste .card-3-info-card {
+    background-color: var(--body-alto-contraste);
+    border: 3px solid var(--branco-puro);
+}
+
+.contraste .card-4-ods-card {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+    color: var(--branco-puro);
+}
+
+
+
 /* ---------------------------------------------------- Configurações Index - Medias ---------------------------------------------------- */
 
 @media (max-width: 1200px) {

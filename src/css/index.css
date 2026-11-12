@@ -94,22 +94,10 @@ h1, h2, h3, .navbar-brand {
     font-weight: 800;
 }
 
-textarea::placeholder, select, input, input::placeholder, textarea:focus, textarea {
-    /* Destaque para títulos com Inter Extra-Bold */
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    color: var(--cinza-claro);
-    font-size: var(--fonter-0-9-to-0-75);
-}
-
 .body-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.conteudo-container {
-    flex: 1;
 }
 
 .footer-container {
@@ -128,4 +116,32 @@ textarea::placeholder, select, input, input::placeholder, textarea:focus, textar
 
 body {
     background-color: var(--body-dark);
+}
+
+textarea::placeholder, select, input, input::placeholder, textarea:focus, textarea {
+    /* Destaque para títulos com Inter Extra-Bold */
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.conteudo-container {
+    flex: 1;
+    color: var(--cinza-claro);
+}
+
+/* ---------------------------------------------------- Configurações Modo Contraste ---------------------------------------------------- */
+
+body.contraste {
+    background-color: var(--body-alto-contraste);
+}
+
+.contraste textarea::placeholder, .contraste select, .contraste input, .contraste input::placeholder, .contraste textarea:focus, .contraste textarea {
+    /* Destaque para títulos com Inter Extra-Bold */
+    color: var(--branco-puro);
+}
+
+.contraste .conteudo-container {
+    color: var(--branco-puro);
 }

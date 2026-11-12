@@ -116,6 +116,39 @@
     color: var(--amarelo-escuro);
 }
 
+
+
+/* ---------------------------------------------------- Configurações Busca Rota - Modo Contraste ---------------------------------------------------- */
+
+.contraste .busca-rota-icon {
+    color: var(--verde-limao-neon);
+}
+
+.contraste .busca-rota-subtitle {
+    color: var(--branco-puro);
+}
+
+.contraste .container-filtros-rotas {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .botao-filtros-hidden.ativo {
+    border-bottom: 1px solid var(--branco-puro);
+}
+
+.contraste .filtro-busca-responsavel, .contraste .filtro-busca-bairro, .contraste .filtro-busca-cidade, .contraste .filtro-busca-tipo-rota, .contraste .filtro-busca-mulheres, .contraste .filtro-busca-aberta, .contraste .filtro-busca-piso, .contraste .filtro-busca-acessivel {
+    border: 5px solid var(--branco-puro);
+    background-color: var(--body-alto-contraste);
+    color: var(--branco-puro);
+}
+
+.contraste .icon-filtro-rotas, .contraste .icon-filtro-rotas-mulheres, .contraste .icon-filtro-vaga-aberta, .contraste .icon-filtro-piso-tatil, .contraste .icon-filtro-acessivel-cadeira {
+    color: var(--amarelo-vivo);
+}
+
+
+
 /* ---------------------------------------------------- Configurações Busca Rota - Medias ---------------------------------------------------- */
 
 @media (max-width: 1200px) {

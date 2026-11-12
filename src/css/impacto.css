@@ -62,6 +62,30 @@
     color: var(--cinza-claro);
 }
 
+
+
+/* ---------------------------------------------------- Configurações Impacto - Modo Contraste ---------------------------------------------------- */
+
+.contraste .impacto-title-icon {
+    color: var(--verde-limao-neon);
+}
+
+.contraste .impacto-icon {
+    color: var(--amarelo-vivo);
+}
+
+.contraste .contraste.impacto-subtitle, .contraste .impacto-number, .contraste .impacto-paragraph {
+    color: var(--branco-puro);
+}
+
+.contraste .impacto-card {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+    text-align: center;
+}
+
+
+
 /* ---------------------------------------------------- Configurações Impactos - Medias ---------------------------------------------------- */
 
 @media (max-width: 1200px) {

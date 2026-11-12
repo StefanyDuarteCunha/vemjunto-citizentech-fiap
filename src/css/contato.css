@@ -98,6 +98,55 @@
 }
 
 
+
+/* ---------------------------------------------------- Configurações Contato - Modo Contraste ---------------------------------------------------- */
+
+.contraste .contato-title-icon {
+    color: var(--verde-limao-neon);
+}
+
+.contraste .contato-subtitle {
+    color: var(--branco-puro);
+}
+
+.contraste #contato-forms {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .contato-forms-label {
+    color: var(--branco-puro);
+}
+
+.contraste .contato-forms-input, .contraste .contato-forms-select, .contraste .contato-forms-textarea {
+    border: 5px solid var(--branco-puro);
+    background-color: var(--body-alto-contraste);
+}
+
+.contraste .contato-forms-cont-caracteres {
+    color: var(--branco-puro);
+}
+
+.contraste .contato-forms-button {
+    background-color: var(--amarelo-vivo);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .contato-forms-button:hover {
+    background-color: var(--amarelo-queimado);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .contato-forms-mensagem-sucesso {
+    background-color: var(--amarelo-vivo);
+    color: var(--body-alto-contraste);
+    border: 1px solid var(--branco-puro);
+}
+
+
+
 /* ---------------------------------------------------- Configurações Contato - Medias ---------------------------------------------------- */
 
 @media (max-width: 1200px) {

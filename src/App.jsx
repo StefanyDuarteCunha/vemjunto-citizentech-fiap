@@ -14,6 +14,7 @@ import Impacto from './components/impacto.jsx'
 import BuscaRotas from './components/buscaRotas.jsx'
 import RotaCard from './components/rotaCard.jsx'
 import Contato from './components/contato.jsx'
+import BotaoContraste from './components/botaoContraste.jsx';
 
 import dadosRotas from './data/rotas.json';
 
@@ -94,6 +95,7 @@ function App() {
     <>
       <BrowserRouter>
         <header>
+          <BotaoContraste />
           <Navbar />
         </header>
 

@@ -221,10 +221,94 @@
 }
 
 .rotacard-button-cadastrar:disabled {
-    background-color: var(--cinza-claro);
-    border: 1px solid var(--cinza-escuro-fechado);
-    color: var(--cinza-escuro-fechado);
+    background-color: var(--cinza-escuro-fechado);
+    border: 1px solid var(--cinza-claro);
+    color: var(--cinza-claro);
 }
+
+
+
+/* ---------------------------------------------------- Configurações Cards Rotas - Modo Contraste ---------------------------------------------------- */
+
+.contraste .rotacards-container, .contraste .rotacard-container-rota {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .rotacards-tag {
+    background-color: var(--verde-limao-neon);
+    border: 2px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+    font-weight: bold;
+}
+
+.contraste .rotacards-tag.ultimo {
+    background-color: var(--amarelo-vivo);
+    border: 2px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .rotacards-tag.lotado {
+    background-color: red;
+    border: 2px solid var(--branco-puro);
+    color: var(--branco-puro);
+}
+
+.contraste .rotacards-title-icon, .contraste .rotacards-title-name {
+    color: var(--branco-puro);
+}
+
+.contraste .rotacards-title-cargo, .contraste .rotacard-encontro-icon, .contraste .rotacard-encontro-title, .contraste .rotacard-integrantes-icon {
+    color: var(--amarelo-vivo);
+}
+
+.contraste .rotacard-date-icon {
+    color: var(--verde-limao-neon);
+}
+
+.contraste .rotacard-frequencia-icon {
+    color: var(--vermelho-neon);
+}
+
+.contraste .rotacard-date-container, .contraste .rotacard-time-container, .contraste .rotacard-integrantes-container, .contraste .rotacard-frequencia-container {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+    color: var(--branco-puro);
+}
+
+.contraste .rotacard-container-exclusivo-mulheres {
+    background-color: red;
+    border: 1px solid var(--branco-puro);
+    font-weight: bold;
+}
+
+.contraste .rotacard-container-acessivel-visual {
+    background-color: var(--ciano-brilhante);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+    font-weight: bold;
+}
+
+.contraste .rotacard-container-acessivel-cadeira {
+    background-color: var(--amarelo-vivo);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+    font-weight: bold;
+}
+
+.contraste .rotacard-button-cadastrar {
+    background-color: var(--verde-limao-neon);
+    border: 3px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+    font-weight: bold;
+}
+
+.contraste .rotacard-button-cadastrar:hover {
+    background-color: var(--verde-escuro-suave);
+    border: 3px solid var(--branco-puro);
+    font-weight: bold;
+}
+
 
 /* ---------------------------------------------------- Configurações Rota Cards - Medias ---------------------------------------------------- */
 
