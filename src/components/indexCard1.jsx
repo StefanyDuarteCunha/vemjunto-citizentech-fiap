@@ -1,7 +1,7 @@
 import '../css/indexCard.css'
 import { Link } from 'react-router-dom';
 
-function IndexCard1() {
+function IndexCard1({ onAbrirModal }) {
 
   return (
     <>
@@ -20,7 +20,7 @@ function IndexCard1() {
             Ver Rotas Seguras
             <i className="bi bi-arrow-right card-1-button-icon-right"></i>
           </Link>
-          <button className="card-1-button-dark">
+          <button className="card-1-button-dark" onClick={onAbrirModal}>
             <i className="bi bi-plus-circle card-1-button-icon-left"></i>
             Propor Nova Rota
           </button>  

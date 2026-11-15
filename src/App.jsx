@@ -15,10 +15,16 @@ import BuscaRotas from './components/buscaRotas.jsx'
 import RotaCard from './components/rotaCard.jsx'
 import Contato from './components/contato.jsx'
 import BotaoContraste from './components/botaoContraste.jsx';
+import NovaRota from './components/novaRota.jsx';
 
 import dadosRotas from './data/rotas.json';
 
 function App() {
+
+  // usado para transformar o arquivo "novaRota.jsx" em um modal que abre acima de todos os arquivos
+  const [modalNovaRotaAberto, setModalNovaRotaAberto] = useState(false);
+  const abrirModalRota = () => setModalNovaRotaAberto(true);
+  const fecharModalRota = () => setModalNovaRotaAberto(false);
 
   // a constante armanezatodos os filtros que serão chamados no documento "buscaRotas"
   const [filtros, setFiltros] = useState({
@@ -96,14 +102,18 @@ function App() {
       <BrowserRouter>
         <header>
           <BotaoContraste />
-          <Navbar />
+          <Navbar onAbrirModal={abrirModalRota} />
         </header>
 
         <main className="conteudo-container">
+          <NovaRota 
+            isOpen={modalNovaRotaAberto} 
+            onClose={fecharModalRota} 
+          />
           <Routes>
             <Route path="/" element={
               <>
-                {<IndexCard1 />}
+                {<IndexCard1 onAbrirModal={abrirModalRota} />}
                 <div className="index-container-line-cards">
                   {<IndexCard2 />}
                   {<IndexCard3 />}

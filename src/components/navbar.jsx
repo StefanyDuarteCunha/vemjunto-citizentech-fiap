@@ -2,7 +2,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../css/navbar.css'
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ onAbrirModal }) {
 
   return (
     <>
@@ -36,7 +36,7 @@ function Navbar() {
                 </Link>
             </div>
             <div className="navbar-container-button">
-                <button className="navbar-button">
+                <button className="navbar-button" onClick={onAbrirModal}>
                     <i className="bi bi-plus-circle navbar-icon-button"></i>
                     Propor Nova Rota
                 </button>  

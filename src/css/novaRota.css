@@ -1,0 +1,285 @@
+@import url('index.css');
+
+
+/* ---------------------------------------------------- Configurações Nova Rota - display dark ---------------------------------------------------- */
+
+.nova-rota-container {
+    margin: 0 20rem;
+    background-color: var(--cinza-escuro-fechado);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.nova-rota-title {
+    margin-top: 1rem;
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--branco-puro);
+    text-align: center;
+}
+
+.nova-rota-title-icon {
+    font-size: var(--fonte-2-25-to-1-5);
+    color: var(--verde-escuro-suave);
+    margin-right: 1rem;
+}
+
+.nova-rota-subtitle {
+    margin: 0.5rem 0 3rem;
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+    text-align: center;
+    font-weight: 300;
+}
+
+.nova-rota-title-section {
+    color: var(--cinza-claro);
+    font-size: var(--fonter-0-9-to-0-75);
+    font-weight: 100;
+    font-style: italic;
+    text-decoration: underline;
+    border-top: 1px solid var(--cinza-medio-escuro);
+    padding-top: 1.5rem;
+}
+
+#nova-rota-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nova-rota-dados-container, .nova-rota-origem-container, .nova-rota-destino-container, .nova-rota-frequencia-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.nova-rota-acessibilidades-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+
+.nova-rota-forms-campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.nova-rota-forms-label, .radio-item, .checkbox-item {
+    margin-bottom: 0.25rem;
+    font-size: var(--fonter-0-9-to-0-75);
+    color: var(--cinza-claro);
+}
+
+.nova-rota-forms-input {
+    padding: 0.55rem 1rem;
+    border: 5px solid var(--cinza-medio-escuro);
+    border-radius: 0.5rem;
+    background-color: var(--body-dark);
+}
+
+.radio-grupo, .checkbox-grupo {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.radio-item, .checkbox-item {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nova-rota-btn-submit {
+    background-color: var(--verde-escuro-suave);
+    border: 1px solid var(--verde-escuro-suave);
+    border-radius: 0.7rem;
+    padding: 0.6rem 0.8rem;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+    margin-top: 1.5rem;
+}
+
+.nova-rota-btn-submit:hover {
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro-border);
+}
+
+.nova-rota-mensagem-sucesso {
+    position: absolute;
+    bottom: 5rem;
+    left: 8rem;
+    z-index: 50; /* utilizado para que o conteúdo flutue sobre os demais */
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro-border);
+    font-size: var(--fonter-0-9-to-0-75);
+    border: 1px solid var(--verde-escuro-border);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    width: 25%;
+}
+
+.nova-rota-forms-campo.acessibilidade {
+    background-color: var(--cinza-escuro-fechado);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 2px solid var(--cinza-medio-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Camada externa: tira o modal do fluxo normal e sobrepõe todos os componentes */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que fique acima de todos os cards e textos */
+    overflow-y: auto; /* Permite rolar caso o formulário fique maior que a tela */
+}
+
+.modal-fechar-btn {
+    background-color: var(--body-alto-contraste);
+    border: 1px solid var(--verde-escuro-suave);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--branco-puro);
+    font-weight: bold;
+    font-size: var(--fonter-0-9-to-0-75);
+}
+
+.modal-fechar-btn:hover {
+    background-color: var(--verde-escuro);
+    border: 1px solid var(--verde-escuro-border);
+}
+
+
+/* ---------------------------------------------------- Configurações Nova Rota - Modo Contraste ---------------------------------------------------- */
+
+.contraste .nova-rota-container {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+}
+
+.contraste .nova-rota-title-icon {
+    color: var(--verde-limao-neon);
+}
+
+.contraste .nova-rota-subtitle, .nova-rota-forms-label, .radio-item, .checkbox-item {
+    color: var(--branco-puro);
+}
+
+.contraste .nova-rota-title-section {
+    color: var(--branco-puro);
+    border-top: 1px solid var(--branco-puro);
+}
+
+.contraste .nova-rota-forms-input {
+    border: 3px solid var(--branco-puro);
+    background-color: var(--body-alto-contraste);
+}
+
+.contraste .nova-rota-btn-submit {
+    background-color: var(--amarelo-vivo);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .nova-rota-btn-submit:hover {
+    background-color: var(--amarelo-queimado);
+    border: 1px solid var(--branco-puro);
+    color: var(--body-alto-contraste);
+}
+
+.contraste .nova-rota-mensagem-sucesso {
+    background-color: var(--amarelo-vivo);
+    color: var(--body-alto-contraste);
+    border: 1px solid var(--branco-puro);
+}
+
+.contraste .nova-rota-forms-campo.acessibilidade {
+    background-color: var(--body-alto-contraste);
+    border: 2px solid var(--branco-puro);
+}
+
+
+
+/* ---------------------------------------------------- Configurações Nova Rota - Medias ---------------------------------------------------- */
+@media (max-width: 1500px) {
+    .nova-rota-container {
+        margin: 0 15rem;
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nova-rota-container {
+        margin: 0 10rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .nova-rota-container {
+        margin: 0 5rem;
+    }
+
+        .nova-rota-dados-container, .nova-rota-origem-container, .nova-rota-destino-container, .nova-rota-frequencia-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .nova-rota-acessibilidades-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .nova-rota-container {
+        margin: 0 4rem;
+    }
+
+    .nova-rota-acessibilidades-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .radio-grupo, .checkbox-grupo {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .nova-rota-container {
+        margin: 0 2rem;
+    }
+
+    .radio-grupo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .checkbox-grupo {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}

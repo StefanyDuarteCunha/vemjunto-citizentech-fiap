@@ -40,7 +40,8 @@
 }
 
 .card-1-tag-paragraph {
-    font-weight: 400;
+    font-weight: 500;
+    color: var(--branco-puro);
     font-size: var(--fonter-0-9-to-0-75);
 }
 
