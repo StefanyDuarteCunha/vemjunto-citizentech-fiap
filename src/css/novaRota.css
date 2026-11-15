@@ -72,6 +72,7 @@
     margin-bottom: 0.25rem;
     font-size: var(--fonter-0-9-to-0-75);
     color: var(--cinza-claro);
+    width: 100%;
 }
 
 .nova-rota-forms-input {
