@@ -37,7 +37,7 @@ O projeto contribui diretamente para as seguintes metas da Agenda 2030 da ONU:
 
 ## 📚 Hooks e Bibliotecas importadas
 - **useState:** utilizado para gerenciar o estado local de um componente, guardando as informações que podem sofrer alterações em tempo real, como por exemplo, o preenchuimento dos campos em um formulário.
-- **seEffect:** utilizado para executar efeitos, como monitoramento de cenários que vão mudar, e que podem gerar ativação ou desativação de algo, como a mudança de cor das telas para o modo de contraste
+- **useEffect:** utilizado para executar efeitos, como monitoramento de cenários que vão mudar, e que podem gerar ativação ou desativação de algo, como a mudança de cor das telas para o modo de contraste
 - **useMemo:** utilizado para extrair informações do arquivo json, listando as cidades e bairros, de acordo com os dados armazenados.
 - **react-router-dom:** utilizado para controlar as rotas e navegações entre as páginas / componentes do site.
 
