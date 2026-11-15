@@ -31,6 +31,28 @@ O projeto contribui diretamente para as seguintes metas da Agenda 2030 da ONU:
 - CSS
 - React
 - Bootstrap Icons
+- Json
+
+---
+
+## 📚 Hooks e Bibliotecas importadas
+- **useState:** utilizado para gerenciar o estado local de um componente, guardando as informações que podem sofrer alterações em tempo real, como por exemplo, o preenchuimento dos campos em um formulário.
+- **seEffect:** utilizado para executar efeitos, como monitoramento de cenários que vão mudar, e que podem gerar ativação ou desativação de algo, como a mudança de cor das telas para o modo de contraste
+- **useMemo:** utilizado para extrair informações do arquivo json, listando as cidades e bairros, de acordo com os dados armazenados.
+- **react-router-dom:** utilizado para controlar as rotas e navegações entre as páginas / componentes do site.
+
+---
+
+## 📋 Padronização
+- **CSS independente:** cada componente possui um CSS independente, para permitir edições mais claras e direcionadas.
+- **Nomenclatura das classes:** cada classe recebeu termos que buscavam explicar o componente de pertencimento, o objeto e especificações. Por exemplo:
+        -> "nova-rota-forms-input" - refere-se a um campo de input, no formulário de cadastro de nova rota.
+        -> "card-1-tag-container" - container que agrupa os elementos da tag, disponível no card 1.
+- **medias:** a responsividade foi realizada para telas desktop, 1200px, 900px, 700px e 500px, de acordo com a necessidade de cada tela, realizando alterações de flex-direction ou quantidade de itens no grid.
+- **modo Dark e alto contraste:** todos os arquivos CSS possuem uma organização contendo:
+        -> a configuração padrão em modo noturno,
+        -> ajustes necessários para o modo de alto contraste,
+        -> ajustes necessários para as medias
 
 ---
 
