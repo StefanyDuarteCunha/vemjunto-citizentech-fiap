@@ -16,6 +16,7 @@ import RotaCard from "./components/rotaCard.jsx";
 import Contato from "./components/contato.jsx";
 import BotaoContraste from "./components/botaoContraste.jsx";
 import NovaRota from "./components/novaRota.jsx";
+import Equipe from "./components/equipe.jsx";
 
 import dadosRotas from "./data/rotas.json";
 
@@ -189,6 +190,7 @@ function App() {
             />
             <Route path="/impactos" element={<Impacto />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/equipe" element={<Equipe />} />
           </Routes>
         </main>
 

@@ -34,6 +34,10 @@ function Navbar({ onAbrirModal }) {
                     <i className="bi bi-chat navbar-icon-menu"></i>
                     Contato
                 </Link>
+                <Link to="/equipe" className="navbar-acessos-menu">
+                    <i className="bi bi-people navbar-icon-menu"></i>
+                    Equipe
+                </Link>
             </div>
             <div className="navbar-container-button">
                 <button className="navbar-button" onClick={onAbrirModal}>
