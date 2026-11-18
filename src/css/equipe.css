@@ -58,9 +58,9 @@
 .equipe-card img {
     width: 100%;
     max-width: 100%;
-    height: auto;
-    display: block;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    display: block;
 }
 
 
