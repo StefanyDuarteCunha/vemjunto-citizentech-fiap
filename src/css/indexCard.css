@@ -300,6 +300,7 @@
 
 .contraste .card-1-tag-paragraph {
     font-weight: bold;
+    color: var(--body-alto-contraste);
 }
 
 .contraste .card-1-title-destaque, .contraste .card-3-info-icon-yellow {
