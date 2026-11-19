@@ -44,7 +44,8 @@
 }
 
 .navbar-container-acessos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     background-color: var(--cinza-escuro-fechado);
     padding: 1rem;
@@ -160,21 +161,23 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .navbar-container {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         align-items: flex-start;
         padding: 1rem;
         width: 100%;
         box-sizing: border-box;
     }
+}
 
+@media (max-width: 900px) {
     .navbar-container-acessos {
         width: 100%;
         box-sizing: border-box;
         justify-content: space-between;
-        /* Distribui os 4 itens igualmente de ponta a ponta */
+        /* Distribui os 5 itens igualmente de ponta a ponta */
         gap: 1rem;
         padding: 0.5rem;
     }
@@ -216,5 +219,13 @@
     .navbar-icon-menu {
         margin: 0;
         padding-bottom: 0.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-container-acessos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
     }
 }
